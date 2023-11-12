@@ -20,8 +20,8 @@
 <div id="Main">
     <div id="Sidebar">
         <div id="SidebarContent">
-            <a href="categoryForm?categoryId=FISH"><img src="../../../images/fish_icon.gif /></a><br />
-            Saltwater, Freshwater <br />
+            <a href="categoryForm?categoryId=FISH"><img src="../../../images/fish_icon.gif" /></a><br />
+            Saltwater, Freshwater<br />
             <a href="categoryForm?categoryId=DOGS"><img src="../../../images/dogs_icon.gif" /></a><br />
             Various Breeds <br />
             <a href="categoryForm?categoryId=CATS"><img src="../../../images/cats_icon.gif" /></a><br />

@@ -76,6 +76,22 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public void insertAccount(Account account) {
 
+        String INSERT_ACCOUNT= "INSERT INTO signon(username,password) values('"+account.getUsername()+"','"+account.getPassword()+"')";
+        try {
+            Connection connection = DBUtil.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_ACCOUNT);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            DBUtil.closeResultSet(resultSet);
+            DBUtil.closePreparedStatement(preparedStatement);
+            DBUtil.closeConnection(connection);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
     @Override

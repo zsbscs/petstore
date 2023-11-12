@@ -9,6 +9,10 @@
         <servlet-class>csu.web.petstore.web.servlet.MainFormServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>csu.web.petstore.web.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>CategoryFormServlet</servlet-name>
         <servlet-class>csu.web.petstore.web.servlet.CategoryFormServlet</servlet-class>
     </servlet>
@@ -53,6 +57,10 @@
     <servlet-mapping>
         <servlet-name>MainFormServlet</servlet-name>
         <url-pattern>/mainForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/registerForm</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CategoryFormServlet</servlet-name>
