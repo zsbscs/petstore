@@ -25,6 +25,10 @@
         <servlet-class>csu.web.petstore.web.servlet.ItemFromServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>UserProfileServlet</servlet-name>
+        <servlet-class>csu.web.petstore.web.servlet.UserProfileServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>AddItemToCartServlet</servlet-name>
         <servlet-class>csu.web.petstore.web.servlet.AddItemToCartServlet</servlet-class>
     </servlet>
@@ -69,6 +73,10 @@
     <servlet-mapping>
         <servlet-name>ProductFormServlet</servlet-name>
         <url-pattern>/productForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserProfileServlet</servlet-name>
+        <url-pattern>/profileform</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ItemFormServlet</servlet-name>

@@ -39,7 +39,7 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <a href="#">Sign Out</a>
                 <img align="middle" src="../../../images/separator.gif" />
-                <a href="#"> My Account</a>
+                <a href="profileform"> My Account</a>
                 <img align="middle" src="../../../images/separator.gif" />
             </c:if>
             <a href="help.html">?</a>

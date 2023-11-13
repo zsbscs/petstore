@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class RemoveCartItemServlet extends HttpServlet {
+public class  RemoveCartItemServlet extends HttpServlet {
 
     private static final String ERROR_FORM = "/WEB-INF/jsp/common/error.jsp";
     private static final String CART_FORM = "/WEB-INF/jsp/cart/cart.jsp";

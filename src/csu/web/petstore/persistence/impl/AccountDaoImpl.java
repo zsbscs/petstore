@@ -76,6 +76,18 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public void insertAccount(Account account) {
 
+
+
+
+    }
+
+    @Override
+    public void insertProfile(Account account) {
+
+    }
+
+    @Override
+    public void insertSignon(Account account) {
         String INSERT_ACCOUNT= "INSERT INTO signon(username,password) values('"+account.getUsername()+"','"+account.getPassword()+"')";
         try {
             Connection connection = DBUtil.getConnection();
@@ -89,18 +101,6 @@ public class AccountDaoImpl implements AccountDao {
         }catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-    }
-
-    @Override
-    public void insertProfile(Account account) {
-
-    }
-
-    @Override
-    public void insertSignon(Account account) {
 
     }
 

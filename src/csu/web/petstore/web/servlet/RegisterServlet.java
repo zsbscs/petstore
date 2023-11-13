@@ -3,6 +3,7 @@ package csu.web.petstore.web.servlet;
 import csu.web.petstore.domain.Account;
 import csu.web.petstore.persistence.AccountDao;
 import csu.web.petstore.persistence.impl.AccountDaoImpl;
+import csu.web.petstore.service.AccountService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,17 +28,9 @@ public class RegisterServlet extends HttpServlet {
 
         String username=req.getParameter("username");
         String password=req.getParameter("password");
-        Account account=new Account();
-        account.setUsername(username);
-        account.setPassword(password);
 
-
-
-
-
-
-
-
+        AccountService accountService=new AccountService();
+        accountService.InsertSignon(username,password);
 
 
 

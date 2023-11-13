@@ -17,7 +17,13 @@ public class AccountService {
         account.setPassword(password);
         return accountDao.getAccountByUsernameAndPassword(account);
     }
+    public void InsertSignon(String username,String password){
+            Account account=new Account();
+        account.setUsername(username);
+        account.setPassword(password);
+        accountDao.insertSignon(account);
 
+    }
 
 
 
