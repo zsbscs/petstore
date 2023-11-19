@@ -7,7 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../common/top.jsp"%>
-<%@include file="../common/bottom.jsp"%>
+
+
 
 
 
@@ -55,7 +56,7 @@
 
     <div id="Separator">&nbsp;</div>
 </div>
-
+<%@include file="../common/bottom.jsp"%>
 
 
 

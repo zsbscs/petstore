@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../common/top.jsp"%>
-
+<html>
 <div id="Catalog">
     <form action="signOn" method="post">
         <p>Please enter your username and password.</p>
@@ -32,4 +32,4 @@
 </div>
 
 <%@ include file="../common/bottom.jsp"%>
-
+</html>

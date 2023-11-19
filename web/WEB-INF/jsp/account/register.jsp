@@ -9,16 +9,17 @@
 <%@include file="../common/top.jsp"%>
 
 <html>
-<div>
+<head>
+
+
+</head>
+<div name="Catalog">
 <form name="register" method="post">
 
     <p>UserName: <input type="text" name="username"></p>
     <p>password: <input type="password" name="password"></p>
 
             <input type="submit" value="register" align="center">
-
-
-
 
 </form>
 

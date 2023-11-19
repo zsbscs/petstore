@@ -84,6 +84,8 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public void insertProfile(Account account) {
 
+
+
     }
 
     @Override
@@ -111,6 +113,23 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public void updateProfile(Account account) {
+        String INSERT_Profile="update account set firstname='"+account.getFirstName()+"',lastname='"+account.getLastName()+"'" +
+                ",addr1='"+account.getAddress1()+"',addr2='"+account.getAddress2()+"',city='"+account.getCity()+"',state='"+account.getState()+"'" +
+                ",country='"+account.getCountry()+"',phone='"+account.getPhone()+"'"+" where userid='"+account.getUsername()+"'";
+        System.out.println(INSERT_Profile);
+        try {
+            Connection connection = DBUtil.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_Profile);
+
+            int resultSet = preparedStatement.executeUpdate();
+
+
+            DBUtil.closePreparedStatement(preparedStatement);
+            DBUtil.closeConnection(connection);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
     }
 

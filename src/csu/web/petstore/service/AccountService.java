@@ -24,6 +24,11 @@ public class AccountService {
         accountDao.insertSignon(account);
 
     }
+    public void UpdateProfile(Account account){
+
+        accountDao.updateProfile(account);
+
+    }
 
 
 
