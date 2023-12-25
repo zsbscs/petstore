@@ -4,7 +4,7 @@
     <a href="mainForm">Return to Main Menu</a>
 </div>
 
-<div id="Catalog">
+<div id="Main">
 
     <h2>${sessionScope.category.name}</h2>
 

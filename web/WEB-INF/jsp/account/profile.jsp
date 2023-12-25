@@ -16,11 +16,11 @@
 <c:if test="${requestScope.signOnMsg != null}">
     <p> <font color="red">${requestScope.signOnMsg} </font> </p>
 </c:if>
-<div id="Catalog" align="center" style="text-align:center;vertical-align:middle;">
+<div id="Main" align="center" style="text-align:center;vertical-align:middle;">
 <form action="" method="post">
 
 Userid:
-        <input  name="userid" value="${sessionScope.loginAccount.getUsername()}"style="text-align: center"><br>
+        <input  name="userid" value="${sessionScope.loginAccount.getUsername()}"style="text-align: center" readonly="readonly"><br>
 
 
 Lastname:<input name="lastname" value="${sessionScope.loginAccount.getLastName()}"> <br>Firstname:<input name="firstname"

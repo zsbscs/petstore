@@ -19,6 +19,7 @@ public class SignOnServlet extends HttpServlet {
 
     private String username;
     private String password;
+    private String code;
 
     private String msg;
 
@@ -26,12 +27,18 @@ public class SignOnServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.username = req.getParameter("username");
         this.password = req.getParameter("password");
+        this.code= req.getParameter("verify");
 
         //校验用户输入的正确性
         if(!validate()){
             req.setAttribute("signOnMsg", this.msg);
             req.getRequestDispatcher(SIGN_ON_FORM).forward(req,resp);
         }else{
+            if (!this.code.equals(req.getSession().getAttribute("rand"))){
+                this.msg="验证码错误！";
+                req.getRequestDispatcher(SIGN_ON_FORM).forward(req,resp);
+            }
+            else{
             AccountService accountService = new AccountService();
             Account loginAccount = accountService.getAccount(username, password);
             if(loginAccount == null){
@@ -52,6 +59,7 @@ public class SignOnServlet extends HttpServlet {
                 resp.sendRedirect("mainForm");
             }
         }
+    }
     }
 
     private boolean validate(){

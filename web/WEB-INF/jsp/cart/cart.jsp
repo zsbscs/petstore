@@ -6,7 +6,7 @@
         beanclass="org.mybatis.jpetstore.web.actions.CatalogActionBean">
     Return to Main Menu</stripes:link></div>
 
-<div id="Catalog">
+<div id="Main">
 
     <div id="Cart">
 
