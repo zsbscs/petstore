@@ -8,7 +8,7 @@
     </a>
 </div>
 
-<div id="Catalog">
+<div id="Main">
 
     <h2>${sessionScope.product.name}</h2>
 

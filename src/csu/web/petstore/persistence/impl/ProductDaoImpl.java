@@ -93,7 +93,9 @@ public class ProductDaoImpl implements ProductDao {
             DBUtil.closeConnection(connection);
         } catch (Exception e) {
             e.printStackTrace();
+
         }
+
 
         return productList;
     }
