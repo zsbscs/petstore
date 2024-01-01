@@ -6,7 +6,7 @@
         Return to ${sessionScope.product.productId}
     </a>
 </div>
-
+<div id="Main">
 <div id="Catalog">
 
     <table>
@@ -49,7 +49,7 @@
     </table>
 
 </div>
-
+</div>
 <%@ include file="../common/bottom.jsp"%>
 
 

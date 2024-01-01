@@ -3,6 +3,7 @@ package csu.web.petstore.web.servlet;
 import csu.web.petstore.domain.Product;
 import csu.web.petstore.persistence.ProductDao;
 import csu.web.petstore.persistence.impl.ProductDaoImpl;
+import csu.web.petstore.service.CatalogService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,9 +24,9 @@ public class SearchServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ProductDao productDao=new ProductDaoImpl();
+        CatalogService catalogService=new CatalogService();
        String keyword=req.getParameter("keyword");
-       List<Product> products=productDao.searchProductList(keyword);
+       List<Product> products=catalogService.searchProductList(keyword);
         HttpSession session=req.getSession();
         session.setAttribute("products",products);
 

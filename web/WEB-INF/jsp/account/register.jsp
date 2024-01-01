@@ -13,11 +13,13 @@
 
 
 </head>
+<body>
 <div id="Main" style="text-align: center">
 <form name="register" method="post">
 
-    <p>UserName: <input type="text" name="username"></p>
-    <p>password: <input type="password" name="password"></p>
+    <div  name="feedback" style="text-align: center;color: red"></div>
+   UserName: <input type="text" name="username"><br><br><br>
+    password: <input type="password" name="password"><br><br><br>
 
             <input type="submit" value="register" align="center">
 </form>
@@ -25,5 +27,7 @@
 
 
     </div>
+<script src="../../../js/check_user.js"></script>
+</body>
 </html>
 <%@include file="../common/bottom.jsp"%>
